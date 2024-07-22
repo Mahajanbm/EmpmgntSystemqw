@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <bean id="product" class="tata.demo.Product" >
+	   <constructor-arg value="12345"></constructor-arg>
+	   <constructor-arg value="mobile"></constructor-arg>
+	   <constructor-arg value="5 Years"></constructor-arg>
+	 
+   </bean>
+
+<bean id="emp" class="tata.demo.Employee">
+	<property name="id" value="101" ></property>
+	<property name="name" value="mahajan"></property>
+<property name="city" value="hyd"></property>	
+<property name="dept" value="IT"></property>
+</bean>
+<bean id="address" class="tata.demo.data.Address">
+	<property name="flatno" value="402"></property>
+	<property name="city" value="Hyd"></property>
+	<property name="state" value="TS"></property>
+	<property name="country" value="India"></property>
+	<property name="pincode" value="123455"></property>
+	</bean>
+<bean id="employee" class="tata.demo.data.Employee">
+<property name="empId" value="101"></property>	
+	<property name="name" value="Sunil"></property>	
+	<property name="dept" value="IT"></property>
+	<property name="address"><ref bean="address"/></property>	
+
+</bean>
+
+
+
+</beans>
